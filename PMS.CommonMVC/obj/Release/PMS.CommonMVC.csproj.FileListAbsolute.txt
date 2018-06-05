@@ -1,0 +1,17 @@
+D:\治有项目\准考证打印\PMS.CommonMVC\bin\Release\PMS.CommonMVC.dll.config
+D:\治有项目\准考证打印\PMS.CommonMVC\bin\Release\PMS.CommonMVC.dll
+D:\治有项目\准考证打印\PMS.CommonMVC\bin\Release\PMS.CommonMVC.pdb
+D:\治有项目\准考证打印\PMS.CommonMVC\bin\Release\EntityFramework.dll
+D:\治有项目\准考证打印\PMS.CommonMVC\bin\Release\EntityFramework.SqlServer.dll
+D:\治有项目\准考证打印\PMS.CommonMVC\bin\Release\Newtonsoft.Json.dll
+D:\治有项目\准考证打印\PMS.CommonMVC\bin\Release\System.Web.Mvc.dll
+D:\治有项目\准考证打印\PMS.CommonMVC\bin\Release\EntityFramework.xml
+D:\治有项目\准考证打印\PMS.CommonMVC\bin\Release\EntityFramework.SqlServer.xml
+D:\治有项目\准考证打印\PMS.CommonMVC\bin\Release\Newtonsoft.Json.xml
+D:\治有项目\准考证打印\PMS.CommonMVC\bin\Release\System.Web.Mvc.xml
+D:\治有项目\准考证打印\PMS.CommonMVC\bin\Release\zh-Hans\System.Web.Mvc.resources.dll
+D:\治有项目\准考证打印\PMS.CommonMVC\obj\Release\PMS.CommonMVC.csprojResolveAssemblyReference.cache
+D:\治有项目\准考证打印\PMS.CommonMVC\obj\Release\PMS.CommonMVC.dll
+D:\治有项目\准考证打印\PMS.CommonMVC\obj\Release\PMS.CommonMVC.pdb
+D:\治有项目\准考证打印\PMS.CommonMVC\bin\Release\Microsoft.Web.Infrastructure.dll
+D:\治有项目\准考证打印\PMS.CommonMVC\bin\Release\Microsoft.Web.Infrastructure.xml

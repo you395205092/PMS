@@ -1,0 +1,41 @@
+﻿@model ExamTypeDTO[]
+@{
+    ViewBag.Title = "导入准考证信息";
+}
+
+<article class="page-container">
+    <form class="form form-horizontal" action="/Exam/Export/" method="post" enctype="multipart/form-data" id="formAdd">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>考试类别：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <select id="TypeId" name="TypeId">
+                    @foreach (var item in Model)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>信息上传：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="file" class="input-text" value="" placeholder="" id="fileData" name="fileData">
+            </div>
+        </div>
+
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit" id="btnSave" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>模板下载：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <a href="/Uploads/准考证信息导入模板.xlsx">准考证信息导入模板</a>
+            </div>
+        </div>
+    </form>
+</article>
+

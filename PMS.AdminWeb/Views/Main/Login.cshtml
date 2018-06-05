@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewBag.Title = "登陆页面";
+}
+
+<div class="header"></div>
+<div class="loginWraper">
+    <div class="loginBox">
+        <form class="form form-horizontal" id="formAdd">
+            <div class="row cl">
+                <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60d;</i></label>
+                <div class="formControls col-xs-8">
+                    <input id="Name" name="Name" type="text" placeholder="账户" class="input-text size-L">
+                </div>
+            </div>
+            <div class="row cl">
+                <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+                <div class="formControls col-xs-8">
+                    <input id="PassWord" name="PassWord" type="password" placeholder="密码" class="input-text size-L">
+                </div>
+            </div>
+            <div class="row cl">
+                <div class="formControls col-xs-8 col-xs-offset-3">
+                    <input class="input-text size-L" id="Code" name="Code" type="text" placeholder="验证码" onblur="if(this.value==''){this.value='验证码:'}" onclick="if(this.value=='验证码:'){this.value='';}" value="验证码:" style="width:150px;">
+                    <img src="~/Main/CreateVerifyCode" id="imgVerifyCode" height="39"> <a id="kanbuq" href="javascript:;">看不清，换一张</a>
+                </div>
+            </div>
+            <div class="row cl">
+                <div class="formControls col-xs-8 col-xs-offset-3">
+                    <input name="" id="btnLogin" type="submit" class="btn btn-success radius size-L" value="&nbsp;登&nbsp;&nbsp;&nbsp;&nbsp;录&nbsp;">
+                    <input name="" type="reset" class="btn btn-default radius size-L" value="&nbsp;取&nbsp;&nbsp;&nbsp;&nbsp;消&nbsp;">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="footer">Copyright 温州市捷点信息技术有限公司 by CNVP.COM.CN</div>
+
+
+
+@section FooterScript{
+
+    <script type="text/javascript" src="~/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script type="text/javascript" src="~/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+    <script type="text/javascript" src="~/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+    <script type="text/javascript">
+        $(function () {
+                $("#kanbuq,#imgVerifyCode").click(function () {
+                    $("#imgVerifyCode").attr("src", "/Main/CreateVerifyCode?" + Math.random());
+                });
+                $("#imgVerifyCode").click();//为了避免页面刚打开的时候加载缓存中"/Main/CreateVerifyCode"
+                //因此要主动点击一下，刷新验证码
+    var saveAjax = function () {
+        var formData = $("#formAdd").serializeArray();
+        $.ajax({
+            url: "/Main/Login", type: "post", dataType: "json", data: formData,
+            success: function (res) {
+                if (res.status == "ok") {
+                    alert("登录成功");
+                    location.href = "/Main/Index";
+                }
+                else {
+                    alert("错误：" + res.errorMsg);
+                    $("#imgVerifyCode").click();
+                }
+            },
+            error: function () {
+                alert("网络出错");
+            }
+        });
+    };
+
+    $("#formAdd").validate({
+		rules:{
+		    Name: {
+				required:true,
+				minlength:2,
+				maxlength:16
+		    },
+		    PassWord: {
+		        required: true,
+		        minlength: 2,
+		        maxlength: 16
+		    },
+		    Code: {
+		        required: true,
+		        minlength: 4,
+		        maxlength: 4
+		    }
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler:function(form){
+		    saveAjax();
+		}
+	});
+});
+    </script>
+}
+
+

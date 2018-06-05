@@ -1,0 +1,17 @@
+D:\治有项目\密码管理系统\PMS\PMS.DTO\bin\Debug\PMS.DTO.dll
+D:\治有项目\密码管理系统\PMS\PMS.DTO\bin\Debug\PMS.DTO.pdb
+D:\治有项目\密码管理系统\PMS\PMS.DTO\obj\Debug\PMS.DTO.dll
+D:\治有项目\密码管理系统\PMS\PMS.DTO\obj\Debug\PMS.DTO.pdb
+D:\培训课程\密码管理系统\PMS\PMS.DTO\bin\Debug\PMS.DTO.dll
+D:\培训课程\密码管理系统\PMS\PMS.DTO\bin\Debug\PMS.DTO.pdb
+D:\培训课程\密码管理系统\PMS\PMS.DTO\obj\Debug\PMS.DTO.dll
+D:\培训课程\密码管理系统\PMS\PMS.DTO\obj\Debug\PMS.DTO.pdb
+D:\培训课程\密码管理系统\PMS.DTO\bin\Debug\PMS.DTO.dll
+D:\培训课程\密码管理系统\PMS.DTO\bin\Debug\PMS.DTO.pdb
+D:\培训课程\密码管理系统\PMS.DTO\obj\Debug\PMS.DTO.dll
+D:\培训课程\密码管理系统\PMS.DTO\obj\Debug\PMS.DTO.pdb
+D:\治有项目\准考证打印\PMS.DTO\bin\Debug\PMS.DTO.dll
+D:\治有项目\准考证打印\PMS.DTO\bin\Debug\PMS.DTO.pdb
+D:\治有项目\准考证打印\PMS.DTO\obj\Debug\PMS.DTO.dll
+D:\治有项目\准考证打印\PMS.DTO\obj\Debug\PMS.DTO.pdb
+D:\治有项目\准考证打印\PMS.DTO\obj\Debug\PMS.DTO.csprojResolveAssemblyReference.cache

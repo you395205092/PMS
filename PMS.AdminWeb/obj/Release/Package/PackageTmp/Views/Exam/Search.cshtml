@@ -1,0 +1,61 @@
+﻿@model SearchResult
+@{
+    ViewBag.Title = "密码列表";
+}
+
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 准考证管理 <span class="c-gray en">&gt;</span> 准考证列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+    <div class="text-c">
+        <form action="/Exam/Search" method="post">
+            <input type="text" name="Keywords" id="Keywords" placeholder="姓名，学号，身份证" style="width:250px" class="input-text">
+            <button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
+        </form>
+    </div>
+
+    <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick=" layer_show('添加信息', '/Exam/Add' , '' , '510' )" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加准考证</a> <a href="javascript:;" onclick=" layer_show('导入信息', '/Exam/Export' , '' , '510' )" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 导入</a></span> <span class="r">共有数据：<strong>@Model.totalCount</strong> 条</span> </div>
+    <div class="mt-20">
+        <table class="table table-border table-bordered table-hover table-bg table-sort">
+            <thead>
+                <tr class="text-c">
+                    <th width="25"><input type="checkbox" name="" value=""></th>
+                    <th width="40">考试类别</th>
+                    <th width="80">姓名</th>
+                    <th width="100">准考证号</th>
+                    <th width="90">考试地点</th>
+                    <th width="90">考试时间</th>
+                    <th width="100">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.result)
+                {
+                    <tr class="text-c">
+                        <td><input type="checkbox" value="@item.Id" name="Ids"></td>
+                        <td>@item.TypeName</td>
+                        <td>@item.StuName</td>
+                        <td>@item.ZKZCode</td>
+                        <td>@item.Address</td>
+                        <td>@item.ExamTime</td>
+                        <td class="td-manage"><a style="text-decoration:none" class="ml-5" onClick="change_password('修改密码','/Exam/Edit','@item.Id','600','270')" href="javascript:;" title="修改密码"><i class="Hui-iconfont">&#xe63f;</i></a> <a title="删除" href="javascript:;" onclick="member_del(this,'@item.Id')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        @{
+            var pager = new PMS.CommonMVC.MyPager();
+            pager.CurrentLinkClassName = "curPager";
+            pager.MaxPagerCount = 10;
+            pager.PageIndex = (int)ViewBag.pageIndex;//这些数据，cshtml不知道，就必须让Action传递给我们
+            //对于所有cshtml要用到，但是又获取不到的数据，都由Action来获取，然后放到ViewBag或者Model中传递给cshtml
+            pager.PageSize = 10;
+            pager.TotalCount = (int)Model.totalCount;
+            pager.UrlPattern = "/Exam/List?pageIndex={pn}";
+        }
+        <div id="pager" class="dataTables_paginate paging_simple_numbers">@Html.Raw(pager.GetPager())</div>
+    </div>
+</div>
+
+
+@section FooterScript{
+    <script type="text/javascript" src="~/lib/laypage/1.2/laypage.js"></script>
+}

@@ -1,0 +1,176 @@
+﻿@model ExamTypeDTO[]
+@{
+    ViewBag.Title = "添加信息";
+}
+
+<article class="page-container">
+    <form  class="form form-horizontal" id="formAdd">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>类别：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                @Html.DropDownList("TypeId", new SelectList(Model, "Id", "Name"))
+            </div>
+        </div>
+        
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>姓名：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" value="" placeholder="" id="StuName" name="StuName">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>学院：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" class="input-text" placeholder="" name="SysName" id="SysName">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>专业：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" value="" class="input-text" placeholder="" name="MajorName" id="MajorName">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>学号：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" value="" class="input-text" placeholder="" name="StuId" id="StuId">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>身份证：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" value="" class="input-text" placeholder="" name="SFZCode" id="SFZCode">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>班级：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" value="" class="input-text" placeholder="" name="ClassName" id="ClassName">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>准考证号：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" value="" class="input-text" placeholder="" name="ZKZCode" id="ZKZCode">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>校区名称：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" value="" class="input-text" placeholder="" name="SchoolName" id="SchoolName">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>考场号：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" value="" class="input-text" placeholder="" name="PlaceNum" id="PlaceNum">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>理论考试座位号：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" value="" class="input-text" placeholder="" name="llzwh" id="llzwh">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>理论考试地址：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" value="" class="input-text" placeholder="" name="Address" id="Address">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>理论考试时间：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" value="" class="input-text" placeholder="" name="ExamTime" id="ExamTime">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>上机考试地址：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" value="" class="input-text" placeholder="" name="LLExamAddress" id="LLExamAddress">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>上机考试时间：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" value="" class="input-text" placeholder="" name="LLExamTime" id="LLExamTime">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>上机座位号：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="text" value="" class="input-text" placeholder="" name="LLExamPlaceNum" id="LLExamPlaceNum">
+            </div>
+        </div>
+        
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit" id="btnSave" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+    </form>
+</article>
+
+
+
+@section FooterScript{
+    
+<script type="text/javascript" src="~/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="~/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="~/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript">
+$(function(){
+    var saveAjax = function () {
+        var formData = $("#formAdd").serializeArray();
+        $.ajax({
+            url: "/Exam/Add",
+            type: "post",
+            data: formData,
+            dataType: "json",
+            success: function (res) {
+                if (res.status == "ok") {
+                    
+                    parent.location.reload();//刷新父窗口
+                }
+                else {
+                    alert(res.errorMsg);
+                }
+            },
+            error: function () { alert("请求出错"); }
+        });
+    };
+
+    $("#formAdd").validate({
+		rules:{
+		    StuName: {
+				required:true,
+				minlength:2,
+				maxlength:16
+		    },
+		    ZKZCode: {
+		        required: true,
+		        minlength: 2,
+		        maxlength: 25
+		    },
+		    SFZCode: {
+		        required: true,
+		        minlength: 2,
+		        maxlength: 25
+		    },
+		    StuId: {
+		        required: true,
+		        minlength: 2,
+		        maxlength: 25
+		    }
+
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler:function(form){
+		    saveAjax();
+		}
+	});
+});
+</script>
+}

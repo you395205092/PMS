@@ -1,0 +1,404 @@
+2017-11-06 10:03:46,919 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/6 10:03:46 +08:00
+
+2017-11-06 10:03:46,931 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+SELECT Count(*)
+FROM INFORMATION_SCHEMA.TABLES AS t
+WHERE t.TABLE_SCHEMA + '.' + t.TABLE_NAME IN ('dbo.T_AdminUsers','dbo.T_Exams','dbo.T_ExamTypes')
+    OR t.TABLE_NAME = 'EdmMetadata'
+2017-11-06 10:03:46,931 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:03:46,933 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/6 10:03:46 +08:00
+
+2017-11-06 10:03:47,230 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Completed in 296 ms with result: 3
+
+2017-11-06 10:03:47,242 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:03:47,242 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/6 10:03:47 +08:00
+
+2017-11-06 10:03:47,383 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/6 10:03:47 +08:00
+
+2017-11-06 10:03:47,477 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT(1) AS [A1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [GroupBy1]
+2017-11-06 10:03:47,477 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:03:47,479 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- p__linq__0: 'PMS.Service.MyDbContext' (Type = String, Size = 4000)
+
+2017-11-06 10:03:47,479 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/6 10:03:47 +08:00
+
+2017-11-06 10:03:47,544 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Completed in 65 ms with result: SqlDataReader
+
+2017-11-06 10:03:47,544 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:03:47,550 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/6 10:03:47 +08:00
+
+2017-11-06 10:03:47,555 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/6 10:03:47 +08:00
+
+2017-11-06 10:03:47,565 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：SELECT TOP (1) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[MigrationId] AS [MigrationId], 
+    [Project1].[Model] AS [Model], 
+    [Project1].[ProductVersion] AS [ProductVersion]
+    FROM ( SELECT 
+        [Extent1].[MigrationId] AS [MigrationId], 
+        [Extent1].[Model] AS [Model], 
+        [Extent1].[ProductVersion] AS [ProductVersion], 
+        1 AS [C1]
+        FROM [dbo].[__MigrationHistory] AS [Extent1]
+        WHERE [Extent1].[ContextKey] = @p__linq__0
+    )  AS [Project1]
+    ORDER BY [Project1].[MigrationId] DESC
+2017-11-06 10:03:47,565 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:03:47,565 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- p__linq__0: 'PMS.Service.MyDbContext' (Type = String, Size = 4000)
+
+2017-11-06 10:03:47,565 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/6 10:03:47 +08:00
+
+2017-11-06 10:03:47,583 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Completed in 17 ms with result: SqlDataReader
+
+2017-11-06 10:03:47,583 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:03:47,584 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/6 10:03:47 +08:00
+
+2017-11-06 10:03:47,593 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/6 10:03:47 +08:00
+
+2017-11-06 10:03:47,634 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_ExamTypes] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2017-11-06 10:03:47,634 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:03:47,634 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/6 10:03:47 +08:00
+
+2017-11-06 10:03:47,701 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Completed in 67 ms with result: SqlDataReader
+
+2017-11-06 10:03:47,701 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:03:47,708 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/6 10:03:47 +08:00
+
+2017-11-06 10:04:01,493 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/6 10:04:01 +08:00
+
+2017-11-06 10:04:01,504 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[LoginErrorTimes] AS [LoginErrorTimes], 
+    [Project1].[LastLoginErrorDateTime] AS [LastLoginErrorDateTime], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[LoginErrorTimes] AS [LoginErrorTimes], 
+        [Extent1].[LastLoginErrorDateTime] AS [LastLoginErrorDateTime], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_AdminUsers] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Name] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-06 10:04:01,504 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:04:01,504 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- p__linq__0: 'admin' (Type = String, Size = 4000)
+
+2017-11-06 10:04:01,504 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/6 10:04:01 +08:00
+
+2017-11-06 10:04:01,558 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Completed in 54 ms with result: SqlDataReader
+
+2017-11-06 10:04:01,558 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:04:01,560 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/6 10:04:01 +08:00
+
+2017-11-06 10:04:01,564 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/6 10:04:01 +08:00
+
+2017-11-06 10:04:01,565 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：SELECT TOP (2) 
+    [Project1].[Id] AS [Id], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[PasswordHash] AS [PasswordHash], 
+    [Project1].[PasswordSalt] AS [PasswordSalt], 
+    [Project1].[LoginErrorTimes] AS [LoginErrorTimes], 
+    [Project1].[LastLoginErrorDateTime] AS [LastLoginErrorDateTime], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted]
+    FROM ( SELECT 
+        [Extent1].[Id] AS [Id], 
+        [Extent1].[Name] AS [Name], 
+        [Extent1].[PasswordHash] AS [PasswordHash], 
+        [Extent1].[PasswordSalt] AS [PasswordSalt], 
+        [Extent1].[LoginErrorTimes] AS [LoginErrorTimes], 
+        [Extent1].[LastLoginErrorDateTime] AS [LastLoginErrorDateTime], 
+        [Extent1].[CreateDateTime] AS [CreateDateTime], 
+        [Extent1].[IsDeleted] AS [IsDeleted]
+        FROM [dbo].[T_AdminUsers] AS [Extent1]
+        WHERE (0 = [Extent1].[IsDeleted]) AND ([Extent1].[Name] = @p__linq__0)
+    )  AS [Project1]
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-06 10:04:01,565 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:04:01,565 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- p__linq__0: 'admin' (Type = String, Size = 4000)
+
+2017-11-06 10:04:01,565 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/6 10:04:01 +08:00
+
+2017-11-06 10:04:01,576 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Completed in 10 ms with result: SqlDataReader
+
+2017-11-06 10:04:01,576 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:04:01,576 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/6 10:04:01 +08:00
+
+2017-11-06 10:04:03,138 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/6 10:04:03 +08:00
+
+2017-11-06 10:04:03,175 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[T_Exams] AS [Extent1]
+        WHERE 0 = [Extent1].[IsDeleted]
+    )  AS [GroupBy1]
+2017-11-06 10:04:03,175 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:04:03,175 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/6 10:04:03 +08:00
+
+2017-11-06 10:04:03,250 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Completed in 74 ms with result: SqlDataReader
+
+2017-11-06 10:04:03,250 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:04:03,254 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/6 10:04:03 +08:00
+
+2017-11-06 10:04:03,255 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/6 10:04:03 +08:00
+
+2017-11-06 10:04:03,292 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：SELECT TOP (10) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[TypeId] AS [TypeId], 
+    [Project1].[ZKZCode] AS [ZKZCode], 
+    [Project1].[StuName] AS [StuName], 
+    [Project1].[SFZCode] AS [SFZCode], 
+    [Project1].[Address] AS [Address], 
+    [Project1].[ExamTime] AS [ExamTime], 
+    [Project1].[PlaceNum] AS [PlaceNum], 
+    [Project1].[SchoolName] AS [SchoolName], 
+    [Project1].[SysName] AS [SysName], 
+    [Project1].[MajorName] AS [MajorName], 
+    [Project1].[ClassName] AS [ClassName], 
+    [Project1].[LLExamAddress] AS [LLExamAddress], 
+    [Project1].[LLExamTime] AS [LLExamTime], 
+    [Project1].[LLExamPlaceNum] AS [LLExamPlaceNum], 
+    [Project1].[StuId] AS [StuId], 
+    [Project1].[IsLook] AS [IsLook], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted], 
+    [Project1].[Id1] AS [Id1], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Description] AS [Description], 
+    [Project1].[CreateDateTime1] AS [CreateDateTime1], 
+    [Project1].[IsDeleted1] AS [IsDeleted1]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeId] AS [TypeId], [Project1].[ZKZCode] AS [ZKZCode], [Project1].[StuName] AS [StuName], [Project1].[SFZCode] AS [SFZCode], [Project1].[Address] AS [Address], [Project1].[ExamTime] AS [ExamTime], [Project1].[PlaceNum] AS [PlaceNum], [Project1].[SchoolName] AS [SchoolName], [Project1].[SysName] AS [SysName], [Project1].[MajorName] AS [MajorName], [Project1].[ClassName] AS [ClassName], [Project1].[LLExamAddress] AS [LLExamAddress], [Project1].[LLExamTime] AS [LLExamTime], [Project1].[LLExamPlaceNum] AS [LLExamPlaceNum], [Project1].[StuId] AS [StuId], [Project1].[IsLook] AS [IsLook], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[IsDeleted] AS [IsDeleted], [Project1].[Id1] AS [Id1], [Project1].[Name] AS [Name], [Project1].[Description] AS [Description], [Project1].[CreateDateTime1] AS [CreateDateTime1], [Project1].[IsDeleted1] AS [IsDeleted1], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeId] AS [TypeId], 
+            [Extent1].[ZKZCode] AS [ZKZCode], 
+            [Extent1].[StuName] AS [StuName], 
+            [Extent1].[SFZCode] AS [SFZCode], 
+            [Extent1].[Address] AS [Address], 
+            [Extent1].[ExamTime] AS [ExamTime], 
+            [Extent1].[PlaceNum] AS [PlaceNum], 
+            [Extent1].[SchoolName] AS [SchoolName], 
+            [Extent1].[SysName] AS [SysName], 
+            [Extent1].[MajorName] AS [MajorName], 
+            [Extent1].[ClassName] AS [ClassName], 
+            [Extent1].[LLExamAddress] AS [LLExamAddress], 
+            [Extent1].[LLExamTime] AS [LLExamTime], 
+            [Extent1].[LLExamPlaceNum] AS [LLExamPlaceNum], 
+            [Extent1].[StuId] AS [StuId], 
+            [Extent1].[IsLook] AS [IsLook], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            [Extent1].[IsDeleted] AS [IsDeleted], 
+            [Extent2].[Id] AS [Id1], 
+            [Extent2].[Name] AS [Name], 
+            [Extent2].[Description] AS [Description], 
+            [Extent2].[CreateDateTime] AS [CreateDateTime1], 
+            [Extent2].[IsDeleted] AS [IsDeleted1], 
+            1 AS [C1]
+            FROM  [dbo].[T_Exams] AS [Extent1]
+            INNER JOIN [dbo].[T_ExamTypes] AS [Extent2] ON [Extent1].[TypeId] = [Extent2].[Id]
+            WHERE 0 = [Extent1].[IsDeleted]
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-06 10:04:03,292 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:04:03,293 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/6 10:04:03 +08:00
+
+2017-11-06 10:04:03,361 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Completed in 68 ms with result: SqlDataReader
+
+2017-11-06 10:04:03,361 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:04:03,373 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/6 10:04:03 +08:00
+
+2017-11-06 10:04:03,374 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/6 10:04:03 +08:00
+
+2017-11-06 10:04:03,375 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_ExamTypes] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2017-11-06 10:04:03,375 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:04:03,375 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/6 10:04:03 +08:00
+
+2017-11-06 10:04:03,378 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Completed in 2 ms with result: SqlDataReader
+
+2017-11-06 10:04:03,378 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:04:03,378 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/6 10:04:03 +08:00
+
+2017-11-06 10:04:09,626 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/6 10:04:09 +08:00
+
+2017-11-06 10:04:09,626 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：SELECT 
+    [GroupBy1].[A1] AS [C1]
+    FROM ( SELECT 
+        COUNT_BIG(1) AS [A1]
+        FROM [dbo].[T_Exams] AS [Extent1]
+        WHERE 0 = [Extent1].[IsDeleted]
+    )  AS [GroupBy1]
+2017-11-06 10:04:09,627 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:04:09,627 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/6 10:04:09 +08:00
+
+2017-11-06 10:04:09,633 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Completed in 6 ms with result: SqlDataReader
+
+2017-11-06 10:04:09,633 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:04:09,633 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/6 10:04:09 +08:00
+
+2017-11-06 10:04:09,634 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/6 10:04:09 +08:00
+
+2017-11-06 10:04:09,634 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：SELECT TOP (10) 
+    [Project1].[C1] AS [C1], 
+    [Project1].[Id] AS [Id], 
+    [Project1].[TypeId] AS [TypeId], 
+    [Project1].[ZKZCode] AS [ZKZCode], 
+    [Project1].[StuName] AS [StuName], 
+    [Project1].[SFZCode] AS [SFZCode], 
+    [Project1].[Address] AS [Address], 
+    [Project1].[ExamTime] AS [ExamTime], 
+    [Project1].[PlaceNum] AS [PlaceNum], 
+    [Project1].[SchoolName] AS [SchoolName], 
+    [Project1].[SysName] AS [SysName], 
+    [Project1].[MajorName] AS [MajorName], 
+    [Project1].[ClassName] AS [ClassName], 
+    [Project1].[LLExamAddress] AS [LLExamAddress], 
+    [Project1].[LLExamTime] AS [LLExamTime], 
+    [Project1].[LLExamPlaceNum] AS [LLExamPlaceNum], 
+    [Project1].[StuId] AS [StuId], 
+    [Project1].[IsLook] AS [IsLook], 
+    [Project1].[CreateDateTime] AS [CreateDateTime], 
+    [Project1].[IsDeleted] AS [IsDeleted], 
+    [Project1].[Id1] AS [Id1], 
+    [Project1].[Name] AS [Name], 
+    [Project1].[Description] AS [Description], 
+    [Project1].[CreateDateTime1] AS [CreateDateTime1], 
+    [Project1].[IsDeleted1] AS [IsDeleted1]
+    FROM ( SELECT [Project1].[Id] AS [Id], [Project1].[TypeId] AS [TypeId], [Project1].[ZKZCode] AS [ZKZCode], [Project1].[StuName] AS [StuName], [Project1].[SFZCode] AS [SFZCode], [Project1].[Address] AS [Address], [Project1].[ExamTime] AS [ExamTime], [Project1].[PlaceNum] AS [PlaceNum], [Project1].[SchoolName] AS [SchoolName], [Project1].[SysName] AS [SysName], [Project1].[MajorName] AS [MajorName], [Project1].[ClassName] AS [ClassName], [Project1].[LLExamAddress] AS [LLExamAddress], [Project1].[LLExamTime] AS [LLExamTime], [Project1].[LLExamPlaceNum] AS [LLExamPlaceNum], [Project1].[StuId] AS [StuId], [Project1].[IsLook] AS [IsLook], [Project1].[CreateDateTime] AS [CreateDateTime], [Project1].[IsDeleted] AS [IsDeleted], [Project1].[Id1] AS [Id1], [Project1].[Name] AS [Name], [Project1].[Description] AS [Description], [Project1].[CreateDateTime1] AS [CreateDateTime1], [Project1].[IsDeleted1] AS [IsDeleted1], [Project1].[C1] AS [C1], row_number() OVER (ORDER BY [Project1].[CreateDateTime] DESC) AS [row_number]
+        FROM ( SELECT 
+            [Extent1].[Id] AS [Id], 
+            [Extent1].[TypeId] AS [TypeId], 
+            [Extent1].[ZKZCode] AS [ZKZCode], 
+            [Extent1].[StuName] AS [StuName], 
+            [Extent1].[SFZCode] AS [SFZCode], 
+            [Extent1].[Address] AS [Address], 
+            [Extent1].[ExamTime] AS [ExamTime], 
+            [Extent1].[PlaceNum] AS [PlaceNum], 
+            [Extent1].[SchoolName] AS [SchoolName], 
+            [Extent1].[SysName] AS [SysName], 
+            [Extent1].[MajorName] AS [MajorName], 
+            [Extent1].[ClassName] AS [ClassName], 
+            [Extent1].[LLExamAddress] AS [LLExamAddress], 
+            [Extent1].[LLExamTime] AS [LLExamTime], 
+            [Extent1].[LLExamPlaceNum] AS [LLExamPlaceNum], 
+            [Extent1].[StuId] AS [StuId], 
+            [Extent1].[IsLook] AS [IsLook], 
+            [Extent1].[CreateDateTime] AS [CreateDateTime], 
+            [Extent1].[IsDeleted] AS [IsDeleted], 
+            [Extent2].[Id] AS [Id1], 
+            [Extent2].[Name] AS [Name], 
+            [Extent2].[Description] AS [Description], 
+            [Extent2].[CreateDateTime] AS [CreateDateTime1], 
+            [Extent2].[IsDeleted] AS [IsDeleted1], 
+            1 AS [C1]
+            FROM  [dbo].[T_Exams] AS [Extent1]
+            INNER JOIN [dbo].[T_ExamTypes] AS [Extent2] ON [Extent1].[TypeId] = [Extent2].[Id]
+            WHERE 0 = [Extent1].[IsDeleted]
+        )  AS [Project1]
+    )  AS [Project1]
+    WHERE [Project1].[row_number] > 0
+    ORDER BY [Project1].[CreateDateTime] DESC
+2017-11-06 10:04:09,653 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:04:09,653 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/6 10:04:09 +08:00
+
+2017-11-06 10:04:09,662 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Completed in 9 ms with result: SqlDataReader
+
+2017-11-06 10:04:09,662 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:04:09,663 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/6 10:04:09 +08:00
+
+2017-11-06 10:04:09,663 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/6 10:04:09 +08:00
+
+2017-11-06 10:04:09,663 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_ExamTypes] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2017-11-06 10:04:09,663 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:04:09,664 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/6 10:04:09 +08:00
+
+2017-11-06 10:04:09,665 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Completed in 1 ms with result: SqlDataReader
+
+2017-11-06 10:04:09,665 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:04:09,666 [6] DEBUG PMS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/6 10:04:09 +08:00
+
+2017-11-06 10:04:10,907 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：Opened connection at 2017/11/6 10:04:10 +08:00
+
+2017-11-06 10:04:10,908 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：SELECT 
+    [Extent1].[Id] AS [Id], 
+    [Extent1].[Name] AS [Name], 
+    [Extent1].[Description] AS [Description], 
+    [Extent1].[CreateDateTime] AS [CreateDateTime], 
+    [Extent1].[IsDeleted] AS [IsDeleted]
+    FROM [dbo].[T_ExamTypes] AS [Extent1]
+    WHERE 0 = [Extent1].[IsDeleted]
+    ORDER BY [Extent1].[CreateDateTime] DESC
+2017-11-06 10:04:10,908 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:04:10,908 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Executing at 2017/11/6 10:04:10 +08:00
+
+2017-11-06 10:04:10,916 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：-- Completed in 8 ms with result: SqlDataReader
+
+2017-11-06 10:04:10,916 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：
+
+2017-11-06 10:04:10,916 [7] DEBUG PMS.Service.MyDbContext - EF执行SQL：Closed connection at 2017/11/6 10:04:10 +08:00
+

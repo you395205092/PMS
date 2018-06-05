@@ -1,0 +1,7 @@
+D:\治有项目\准考证打印\PMS.IService\bin\Release\PMS.IService.dll
+D:\治有项目\准考证打印\PMS.IService\bin\Release\PMS.IService.pdb
+D:\治有项目\准考证打印\PMS.IService\bin\Release\PMS.DTO.dll
+D:\治有项目\准考证打印\PMS.IService\bin\Release\PMS.DTO.pdb
+D:\治有项目\准考证打印\PMS.IService\obj\Release\PMS.IService.csprojResolveAssemblyReference.cache
+D:\治有项目\准考证打印\PMS.IService\obj\Release\PMS.IService.dll
+D:\治有项目\准考证打印\PMS.IService\obj\Release\PMS.IService.pdb

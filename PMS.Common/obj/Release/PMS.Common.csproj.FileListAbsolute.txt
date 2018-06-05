@@ -1,0 +1,5 @@
+D:\治有项目\准考证打印\PMS.Common\bin\Release\PMS.Common.dll
+D:\治有项目\准考证打印\PMS.Common\bin\Release\PMS.Common.pdb
+D:\治有项目\准考证打印\PMS.Common\obj\Release\PMS.Common.csprojResolveAssemblyReference.cache
+D:\治有项目\准考证打印\PMS.Common\obj\Release\PMS.Common.dll
+D:\治有项目\准考证打印\PMS.Common\obj\Release\PMS.Common.pdb

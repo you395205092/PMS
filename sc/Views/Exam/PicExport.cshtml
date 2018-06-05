@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "批量导入图片";
+}
+
+<article class="page-container">
+    <form class="form form-horizontal" action="/Exam/PicExport/" method="post" enctype="multipart/form-data" id="formAdd">
+        
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>信息上传：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="file" class="input-text" value="" placeholder="" id="fileData" name="fileData">
+            </div>
+        </div>
+
+
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" type="submit" id="btnSave" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+            </div>
+        </div>
+
+        <div class="row cl">
+ 
+            <div class="formControls col-xs-8 col-sm-9">
+                请把图片名称命名为"学号.jpg"
+            </div>
+        </div>
+    </form>
+</article>
+

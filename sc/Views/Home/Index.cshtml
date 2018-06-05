@@ -1,0 +1,30 @@
+﻿@model ExamTypeDTO[]
+@{
+    ViewBag.Title = "查询";
+}
+<style>
+    .my-select-css-class {font-size: 14px;height: 36px;line-height: 36px;border:1px solid #eaeaea; width:300px;
+    }
+</style>
+<form class="form form-horizontal" action="/Home/Inquiry" method="post"  id="formAdd">
+    <table style="width: 600px;height: 315px; border: 1px solid #eaeaea;margin: 30px auto;" cellpadding="0" cellspacing="0">
+        <tbody>
+            <tr>
+                <th style="background: #d44533;font-size: 18px;height: 55px;color: #fff; text-align:center" colspan="2">准考证打印查询</th>
+            </tr>
+            <tr>
+                <td width="200" style="font-size: 14px;height: 36px;line-height: 36px; text-align:right; padding:10px 0;padding-top:20px">考试类别：</td>
+                <td width="400" style="font-size: 14px;height: 36px;line-height: 36px; padding:10px 0;padding-top:20px">@Html.DropDownList("TypeId", new SelectList(Model, "Id", "Name"), new { @class = "my-select-css-class" })</td>
+            </tr>
+            <tr>
+                <td width="200" style="font-size: 14px;height: 36px;line-height: 36px; text-align:right; padding:10px 0;padding-top:20px">输入学号：</td>
+                <td width="400" style="font-size: 14px;height: 36px;line-height: 36px; padding:10px 0;padding-top:20px"><input type="text" id="StuId" name="StuId" style="height: 36px;line-height: 36px;width: 300px;border: 1px solid #eaeaea"></td>
+            </tr>
+            <tr>
+                <td width="200" style="font-size: 14px;height: 36px;line-height: 36px; text-align:right; padding:10px 0;">输入姓名：</td>
+                <td width="400" style="font-size: 14px;height: 36px; padding:10px 0;"><input type="text" id="StuName" name="StuName" style="height: 36px;line-height: 36px;width: 300px;border: 1px solid #eaeaea"></td>
+            </tr>
+            <tr align="center"><td colspan="2"><input type="submit" value="我要查询" style="background: #e67333;color: #fff;font-size: 16px;width: 108px;height: 40px;border: none;margin-right: 20px;"> <input type="reset" value="取消" style="background: #bebebe;color: #fff;font-size: 16px;width: 88px;height: 34px;border: none;"></td></tr>
+        </tbody>
+    </table>
+</form>

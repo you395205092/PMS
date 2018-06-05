@@ -1,0 +1,5 @@
+D:\治有项目\准考证打印\PMS.DTO\bin\Release\PMS.DTO.dll
+D:\治有项目\准考证打印\PMS.DTO\bin\Release\PMS.DTO.pdb
+D:\治有项目\准考证打印\PMS.DTO\obj\Release\PMS.DTO.csprojResolveAssemblyReference.cache
+D:\治有项目\准考证打印\PMS.DTO\obj\Release\PMS.DTO.dll
+D:\治有项目\准考证打印\PMS.DTO\obj\Release\PMS.DTO.pdb

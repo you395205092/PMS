@@ -1,0 +1,92 @@
+﻿@model AdminUserDTO
+@{
+    ViewBag.Title = "Change";
+}
+
+<article class="page-container">
+    <form  class="form form-horizontal" id="form-change-password">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>账户：</label>
+            <input type="hidden" name="Id" id="id" value="@Model.Id"/>
+            <div class="formControls col-xs-8 col-sm-9"> @Model.Name </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>新密码：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="password" class="input-text" autocomplete="off" placeholder="不修改请留空" name="PassWord" id="PassWord">
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>确认密码：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="password" class="input-text" autocomplete="off" placeholder="不修改请留空" name="PassWord2" id="PassWord2">
+            </div>
+        </div>
+        <div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                <input class="btn btn-primary radius" id="btn_save" type="submit" value="&nbsp;&nbsp;保存&nbsp;&nbsp;">
+            </div>
+        </div>
+    </form>
+</article>
+
+@section FooterScript{
+    
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="~/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="~/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="~/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#form-change-password").validate({
+		rules:{
+		    PassWord: {
+				required:true,
+				minlength:6,
+				maxlength:16
+			},
+			PassWord2: {
+				required:true,
+				minlength:6,
+				maxlength:16,
+				equalTo: "#PassWord"
+			},
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler:function(form){
+		    $.ajax({
+		        url: "/User/Edit/",
+                type:"post",
+		        data: { id: $("#id").val(), PassWord: $("#PassWord").val() },
+		        dataType: "json",
+		        success: function (res) {
+		            if (res.status == "ok") {
+		                //layer.msg("密码修改成功!", { icon: 1, time: 2000 });
+		                layer.alert("密码修改完成！",function(){
+		                    var index = parent.layer.getFrameIndex(window.name);
+		                    parent.layer.close(index);
+                        });
+		                
+		                /*var index = parent.layer.getFrameIndex(window.name);
+		                parent.$('.btn-refresh').click();
+		                parent.layer.close(index);*/
+
+		            }
+		            else {
+		                alert("error" + res.errorMsg);
+		            }
+		        }
+		    })
+			//var index = parent.layer.getFrameIndex(window.name);
+			//parent.$('.btn-refresh').click();
+			
+		}
+	});
+});
+    
+</script>
+
+
+}

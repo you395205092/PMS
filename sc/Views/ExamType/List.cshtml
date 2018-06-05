@@ -1,0 +1,80 @@
+﻿@model ExamTypeDTO[]
+@{
+    ViewBag.Title = "密码类别列表";
+}
+<form id="formAdd">
+    <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 类别管理 <span class="c-gray en">&gt;</span> 准考证列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+    <div class="page-container">
+        <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick=" layer_show('添加类别', '/ExamType/Add' , '' , '510' )" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加类别</a></span> <span class="r">共有数据：<strong>@Model.Count()</strong> 条</span> </div>
+        <div class="mt-20">
+            <table class="table table-border table-bordered table-hover table-bg table-sort">
+                <thead>
+                    <tr class="text-c">
+                        <th width="25"><input type="checkbox" name="Ids" value="" id="Ids"></th>
+                        <th width="40">名称</th>
+                        <th width="80">描述</th>
+                        <th width="100">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="text-c">
+                            <td><input type="checkbox" value="1" name="Ids"></td>
+                            <td>@item.Name</td>
+                            <td>@item.Description</td>
+                            <td class="td-manage"><a style="text-decoration:none" class="ml-5" onClick="change_password('修改类别','/ExamType/Edit','@item.Id','600','330')" href="javascript:;" title="修改类别"><i class="Hui-iconfont">&#xe647;</i></a> <a title="删除" href="javascript:;" onclick="member_del(this,'@item.Id')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</form>
+@section FooterScript{
+    <script type="text/javascript" src="~/lib/laypage/1.2/laypage.js"></script>
+    <script>
+        function change_password(title, url, id, w, h) {
+            url = url + "/" + id;
+            layer_show(title, url, w, h);
+        }
+        function member_del(obj, id) {
+            layer.confirm('确认要删除吗？', function (index) {
+                $.ajax({
+                    type: 'POST',
+                    url: '/ExamType/Delete/' + id,
+                    dataType: 'json',
+                    success: function (data) {
+                        $(obj).parents("tr").remove();
+                        layer.msg('已删除!', { icon: 1, time: 1000 });
+                    },
+                    error: function (data) {
+                        console.log(data.msg);
+                    },
+                });
+            });
+        }
+
+
+
+        function datadel() {
+            layer.confirm('确认要删除吗？', function (index) {
+                var formData = $("#formAdd").serializeArray();
+                $.ajax({
+                    type: 'POST',
+                    url: '/ExamType/DeleteAll/',
+                    data:formData,
+                    dataType: 'json',
+                    success: function (data) {
+                        $(obj).parents("tr").remove();
+                        layer.msg('已删除!', { icon: 1, time: 1000 });
+                    },
+                    error: function (data) {
+                        console.log(data.msg);
+                    },
+                });
+            });
+        }
+    </script>
+}
